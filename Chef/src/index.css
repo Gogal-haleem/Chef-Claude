@@ -1,0 +1,62 @@
+
+body{
+  font-family: Inter,sans-serif;
+  margin:0px;
+  padding-bottom:20px;
+}
+
+.Head{
+  position: relative;
+  border: 1px solid whitesmoke;
+  height:100px;
+  padding-top:13px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10),0px 1px 2px 0px ;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.Head-logo{
+position: absolute;
+left:450px;
+top:-5px;
+
+}
+
+.Head-heading{
+  position: absolute;
+  font-weight: 400;
+
+}
+.add-ingridient-form{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  padding-top:40px;
+  
+}
+
+.add-ingridient-form >input{
+  
+  height:30px;
+  border:1px solid #D1D5D8;
+  border-radius:5px;
+  padding: 7px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10),0px 1px 2px 0px ;
+  display: flex;
+  flex-grow:1;
+  min-width: 150px;
+  max-width: 600px;
+  font-size: 1.1rem;
+
+}
+
+.add-ingridient-form >button{
+  border-radius:6px;
+  width: 150px;
+  border: 1px solid #D1D5D8;
+  background-color: #141413;
+  color:#FAFAF8;
+  font-size: 1rem;
+}
