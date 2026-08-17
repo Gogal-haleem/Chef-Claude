@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
-export default function Main(props){
 
-   const ingrideint=["chicken","Milk","Yougart","Garlic"]
 
-   const IngridientItem=ingrideint.map((ingrideint)=>{
-return <li key={ingrideint}>{ingrideint}</li>
-   })
-
-   function Submmit(){
-    event.preventDefault()
-    console.log("Submmited!")
-   }
-=======
 import React from "react"
 
 
@@ -37,7 +25,7 @@ export default function Main(){
    }
 
 
->>>>>>> main
+
     
    return <main>
         <form onSubmit={Submmit} className="add-ingridient-form">
@@ -47,21 +35,13 @@ export default function Main(){
             aria-label="Add ingrideint"
             name="ingridient"/>
             <button > + Add ingrideint</button>
-<<<<<<< HEAD
+
         </form>
         <ul>
-            {IngridientItem}
-        </ul>
-=======
-            </form>
-             <ul>
             {IngriNew}
         </ul>
-        
->>>>>>> main
          </main>
-      
+}
 
     
 
-}
