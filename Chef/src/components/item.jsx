@@ -1,22 +1,17 @@
 import React from "react"
+import Head from  "./Head"
+import Body from  "./Star"
+
 export default function Item(){
 
-  let [array,setarray]=React.useState([])
-      const allthings=["😁","👍","😍", "💕"]
-      let NewAdding=array.map((thing)=>
-          <p key={thing}>{thing}</p>)
-   
-   
-        function AddNewString(){
-           setarray(prevarray=> [...prevarray, allthings[prevarray.length]]  )
-          }
+const[userName,setUserName]=React.useState("Joe")
 
-   return<main>
-    <h1 className="heading-item">Add item to empty Array</h1>
-    <button onClick={AddNewString} className="addingString">Add item</button>
-    <section className="Section1"
-    aria-live="polite">
-      {NewAdding}
-    </section>
-   </main>
-}
+   return<section>
+     <Head userName={userName}/>
+     <Body userName={userName}/>
+   </section>
+   
+    }
+
+     
+    
