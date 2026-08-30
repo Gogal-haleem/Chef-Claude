@@ -3,6 +3,13 @@
 
 import React from "react"
 
+import { getRecipeFromChefClaude } from "../ai"
+
+
+
+
+
+
 import RecipeSection  from "./Section"
 import IngridientList from "./IngridientlList"
 export default function Main(){
@@ -15,9 +22,8 @@ export default function Main(){
       
 let[showRecipe,setshowRecipe]=React.useState(false)
 
-function Show(){
-   setshowRecipe(prevshowRecipe=> !prevshowRecipe) 
-}
+const [recipe,setRecipe]=React.useState("")
+
    function Submmit(formdata){
   
             let Newingridient=formdata.get("ingridient")
@@ -27,6 +33,15 @@ function Show(){
     console.log("Submmited!")
    }
 
+   async function handleClick() {
+  
+     setshowRecipe(prevshowRecipe=> !prevshowRecipe) 
+
+const RecipeToCook= await getRecipeFromChefClaude(Ingridient)
+
+setRecipe(RecipeToCook)
+
+}
 
 
     
@@ -45,9 +60,9 @@ function Show(){
         
      
 
-  <IngridientList length ={Ingridient.length} IngriNew={IngriNew}   Show={Show}/>
+  <IngridientList length ={Ingridient.length} IngriNew={IngriNew}   handleClick={handleClick}/>
 
-  <RecipeSection section={showRecipe} />
+  <RecipeSection section={showRecipe} recipe={recipe} />
     
      </main>
 }

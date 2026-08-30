@@ -9,7 +9,7 @@ export default function IngridientList(props){
            <div className="Get-recipe">
             <h3>Ready for a recipe ?</h3>
             <p >Generate a recipe from your list of ingrideints</p>
-            <button onClick={()=>props.Show()}className="Button-1">Get a recipe</button>
+            <button onClick={()=>props.handleClick()} className="Button-1">Get a recipe</button>
            </div>
 }
          </section>)
