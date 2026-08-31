@@ -117,3 +117,9 @@ top:-5px;
   top:15px;
   left:20px;
 }
+
+
+.suggested-recipe-container{
+max-width: 700px;
+padding-left: 190px;
+}

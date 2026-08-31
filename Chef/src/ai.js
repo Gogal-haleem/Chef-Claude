@@ -7,8 +7,8 @@ export async function getRecipeFromChefClaude(ingredientsArr) {
     
     try {
         // We use chatCompletion with explicit messages layout to bypass provider errors entirely
-        const response = await hf.chatCompletion({
-            model: "Qwen/Qwen2.5-7B-Instruct",
+        const response=await hf.chatCompletion({
+            model: "meta-llama/Llama-3.3-70B-Instruct",
             messages: [
                 { role: "system", content: "You are Chef Claude, a professional culinary assistant. Take the user's ingredients list and provide a formatted recipe description with step-by-step instructions." },
                 { role: "user", content: `I have these ingredients: ${ingredientsString}` }
